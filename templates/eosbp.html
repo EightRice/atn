@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block content%}
+<title>{%block title%}Autonet | EOS BP{%endblock%}</title>
+<br><br><br><br><br><br><br><br>
+<h1>EOSIO Block Producer</h1>
+{%for agent in all%}
+
+{{agent.nume}}
+<br>{{agent.image}}
+<img src='media/{{agent.image}}'>
+
+{%endfor%}
+{%endblock%}

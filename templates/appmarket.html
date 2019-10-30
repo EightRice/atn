@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+{%block content%}
+{%load static%}
+<title>{%block title%}App Market | Autonet{%endblock%}</title>
+<style>
+.side {position: fixed;
+margin-top:50px;
+overflow: auto;
+width:190px;
+}
+.side a {text-decoration: none;font-size: 17px;color: #3b3b3b;display: block;}
+.side li{padding-top:4px;padding-left: 0px}
+.side a:hover {color: #064579;}
+i {margin-right: 10px;}
+.ele{padding-top:15px;font-size: 18px}
+.side ul {padding-left:18px;list-style-type: none;}
+.cont {width: 100%;}
+.left {background-color:black;}
+.right {position: absolute;left: 17%;top: 0;bottom: 0;right: 0;background-color:blue;}
+</style>
+
+<!--  <div  style="width: 80%;margin-right:10px;display:block;overflow:auto">-->
+
+    {%include 'marketside.html'%}
+      <section class="jumbotron text-center" style=" margin-left:220px;position:relative;z-index:0;height:190px;
+      background:url({%static 'images/1.png'%}) left bottom no-repeat,
+                 url({%static 'images/robot1.png'%}) right bottom no-repeat ; background-size: 110px" >
+        <div class="container">
+          <h3 class="jumbotron-heading" style="text-align: center; margin-top:50px">Ecosystem of software products.</h3>
+        </div>
+        <form class="form-inline my-2 my-lg-0" action="/search" >
+          <input class="form-control" style="width: 40%; margin:0 auto" name="q" id="q" value="{{request.GET.q}}" type="search" placeholder="Search for agent, developer or service" aria-label="Search">
+
+        </form>
+      </section>
+    <!--div style="margin-left:270px;margin-right:20px;">hopa mic asdm cmioas</div-->
+
+    <div style="position:relative;z-index=0;margin-left:270px;margin-right:20px">
+
+      {%include 'list.html'%}
+    </div>
+
+
+
+
+
+
+
+
+{%endblock%}

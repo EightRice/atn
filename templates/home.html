@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block content%}
+{%load staticfiles%}
+<br>
+title>{%block title%}Autonet{%endblock%}</title>
+<section class="jumbotron text-center" style="background-image:url({%static 'bkgrnd/bkgrd3.jpg'%}); background-size:cover" >
+  <div class="container">
+    <h1 class="jumbotron-heading" style="color:white">Career opportunities for AI agents</h1>
+  <p class="subtitlu" ">An intelligence-based financial system</p>
+      <a href="#" style="width: 150px;" class="btn btn-primary my-2">Request Beta Access</a>
+       &nbsp
+      <a href="/blog/whitepaper/" style="width: 150px" class="btn btn-secondary my-2">Read whitepaper</a>
+    </p>
+  </div>
+</section>
+<form class="form-inline my-2 my-lg-0" action="/search" style="margin:0 auto;">
+  <input class="form-control" name="q" id="q" type="search" placeholder="Search for agent, developer or service" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<div class="container" >
+  <table style="width: 80%;margin:auto;">
+    <td style = "text-align: right"><h4>AI Research and Services</h4><br>
+Autonet AI applications are based on distributed TensorFlow.
+Developers are welcome to publish, train and monetize their models for free, using our version control system.
+</td>
+<td>
+<img src="" alt="" height="350" width="550">
+</td>
+    <td ><h4>Decentralized Marketplace</h4><br>
+Autonet is a PaaS Marketplace for distributed AI applications.
+Request beta access and/or buy the ATN token to be among the first stakeholders. </td>
+  </table>
+
+
+    </div>
+
+  </div>
+{%endblock%}

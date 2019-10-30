@@ -1,0 +1,55 @@
+{%load staticfiles%}
+{%url 'market' as market%}
+{%url 'home' as home%}
+<nav class="navbar navbar-expand-lg navbar-light bg-light;"style="{% if request.path != home %}box-shadow: 5px 3px 7px #cccccc;{%endif%}; position:fixed; width: 100%; background-color:white; z-index=1000>
+  <a class="navbar-brand" </a>
+  <button class="navbar-toggler" style="background-color:#8f8f8f" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a href="{%url 'home'%}"><img src='{%static 'images/logo.png'%}'  height="24"/></a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav pl-4">
+      <li class="nav-item">
+        <a class="nav-link " href="{%url 'appmarket'%}">App Market<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.path == market %}active {%endif%}" href="{%url 'market'%}">AI Market<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href=""> &#x1F525 AGI Project</a>
+      </li>
+      <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     EOS Block Producer
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Vote autoneteosio</a>
+    <a class="dropdown-item" href="#">Code of conduct</a>
+    <a class="dropdown-item" href="#">Electorate Analysis</a>
+    <a class="dropdown-item" href="#">Initiatives</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">bp.json</a>
+  </div>
+</li>
+    </ul>
+
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Docs<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">Organization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">Terms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="background: #5a7091;color:white;border-radius: 5px;margin-left:24px  " href="">Sign in</a>
+
+      </li>
+    </ul>
+  </div>
+</nav>

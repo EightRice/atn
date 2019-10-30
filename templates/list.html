@@ -1,0 +1,22 @@
+
+{%load staticfiles%}
+
+<div class="card-columns" ">
+  {%for agent in all%}
+
+  <div class="card">
+    <img src="media/{{agent.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{agent.nume}}</h5>
+      <p class="card-text"><small class="text-muted">Developer: <b>{{agent.developer}}</b></small></p>
+      <p class="card-text">{{agent.description}}</p>
+      <a href="agent/{{agent.id}}" class="btn btn-secondary">Demo</a>
+    </div>
+
+  </div>
+
+
+
+
+{%endfor%}
+</div>
